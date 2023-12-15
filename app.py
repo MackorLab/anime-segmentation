@@ -62,4 +62,4 @@ if __name__ == "__main__":
             output_mask = gr.Image(label="mask")
             output_img = gr.Image(label="result", image_mode="RGBA")
         run_btn.click(rmbg_fn, [input_img, model_image_size], [output_mask, output_img])
-    app.launch(server_port=opt.port)
+    app.launch(debug=True, max_threads=True, share=True, inbrowser=True)
